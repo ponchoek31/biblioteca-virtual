@@ -1,31 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Biblioteca Virtual</title>
+	<LINK REL=StyleSheet HREF="estilos.css" TYPE="text/css" MEDIA=screen>
+	<!-- fuente de login --><link href="https://fonts.googleapis.com/css?family=Oswald:300,400" rel="stylesheet"> 
+<!-- el siguiente php es para validar los datos-->
+<?php	
+if($_POST){
+	$Nombre = $_POST["Nombre"];
+	var_dump($Nombre);
+
+	if($Nombre == "") echo "falta ingresar el nombre";
+		else(echo $Nombre);
+}
+
+
+?>
+
 </head>
 <body>
 	<div id="header">
 		<ul class="nav">
-			<li><a href="">Inicio</a>
+			<li><a href="index.html">Inicio</a>
 				<ul>
-					<li><a href="">Submenu1</a></li>
-					<li><a href="">Submenu2</a></li>
-					<li><a href="">Submenu3</a></li>
-					<li><a href="">Submenu4</a></li>
+					<li><a href="">Documentacion</a></li>
+					<li><a href="">Nosotros</a></li>
+					
 				</ul>
 
 			</li>
 				
 			<li><a href="">servicios</a>
 				<ul>
-					<li><a href="">Submenu1</a></li>
-					<li><a href="">Submenu2</a></li>
-					<li><a href="">Submenu3</a></li>
-					<li><a href="">Submenu4</a></li>
+					<li><a href="">Registro</a></li>
+					<li><a href="">Libros</a>
+						<ul>
+							<li><a href="">Categoria</a></li>
+							<li><a href="">A-Z</a></li>
+							
+						</ul>
+
+					</li>
+					<li><a href="">Revistas</a>
+						<ul>
+							<li><a href="">Categoria</a></li>
+							<li><a href="">A-Z</a></li>
+							
+						</ul>
+
+					</li>
+					<li><a href="">Aportaciones</a></li>
 				</ul>
 
 			</li>
 				
-			<li><a href="">registro</a></li>
-			<li><a href="">contacto</a></li>
+			<li><a href="">Contacto</a></li>
+			<li><a href="">Log In</a></li>
 		</ul>
 
 	</div>
+<br><br><br><br><br>
+ <!-- formulario de login -->
+ <div id="login">
+	<form name="form2" method="post" action="registro.html">
+		<h1>Registro de Usuarios</h1>
+		<input type="text" name="Matricula" max-lenght="45" placeholder="Ingrese su matricula"/>
+		<input type="text" name="Nombre" maxlength="45" placeholder="Ingrese su nombre">
+		<input type="text" name="Ape_p" maxlength="45" placeholder="Ingrese su apellido paterno">
+		<input type="text" name="Ape_m" maxlength="45" placeholder="Ingrese su apellido materno">
+		<select name="Carrera">
+			<option value="Selecciona tu carrera">Selecciona tu carrera</option>
+			<option value="ENERGIAS RENOVABLES">ENERGIAS RENOVABLES</option>
+			<option value="LOGISTICA INTERNACIONAL">LOGISTICA INTERNACIONAL</option>
+			<option value="MANTENIMIENTO INDUSTRIAL">MANTENIMIENTO INDUSTRIAL</option>
+			<option value="MECATRONICA">MECATRONICA</option>
+			<option value="NANOTECNOLOGIA">NANOTECNOLOGIA</option>
+			<option value="NEGOCIOS E INNOVACION EMPRESARIAL">NEGOCIOS E INNOVACION EMPRESARIAL</option>
+			<option value="PROCESOS Y OPERACIONES INDUSTRIALES">PROCESOS Y OPERACIONES INDUSTRIALES</option>
+			<option value="TECNOLOGIAS DE LA INFORMACION">TECNOLOGIAS DE LA INFORMACION</option>
+			<option value="FINANCIERA Y FISCAL">FINANCIERA Y FISCAL</option>
+			<option value="PROTECCION CIVIL">PROTECCION CIVIL</option>
+			<option value="TERAPIA FISICA">TERAPIA FISICA</option>
+			<option value="PROCESOS AVANZADOS DE FABRICACION">PROCESOS AVANZADOS DE FABRICACION</option>
+
+		</select>
+		<input type="email" name="Correo" placeholder="Ingrese su correo electronico">	
+		<input type="text" name="Edad" placeholder="Ingrese su correo electronico">
+		<input type="password" name="Pass" max-lenght="12" placeholder="Ingrese su password"/>
+		<button type="submit">Entrar</button>
+		<button type="href">Registrarse</button>
+	</form>
+</div>
 </body>
+<?php
+		if(isset($_POST['submit'])){
+			require("registro.php");
+		}
+	?>
 </html>
