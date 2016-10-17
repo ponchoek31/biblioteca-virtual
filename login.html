@@ -3,12 +3,7 @@
 <head>
 	<title>Biblioteca Virtual</title>
 	<LINK REL=StyleSheet HREF="estilos.css" TYPE="text/css" MEDIA=screen>
-	<?php
-	include("login.php");
-	$con=conectar();
-	echo "exitosa"
-	?>
-
+	<!-- fuente de login --><link href="https://fonts.googleapis.com/css?family=Oswald:300,400" rel="stylesheet"> 
 </head>
 <body>
 	<div id="header">
@@ -24,7 +19,7 @@
 				
 			<li><a href="">servicios</a>
 				<ul>
-					<li><a href="registro.html">Registro </a></li>
+					<li><a href="Registro.html">Registro</a></li>
 					<li><a href="">Libros</a>
 						<ul>
 							<li><a href="">Categoria</a></li>
@@ -47,11 +42,20 @@
 			</li>
 				
 			<li><a href="">Contacto</a></li>
-			<li><a href="login.html">Log In</a></li>
+			<li><a href="">Log In</a></li>
 		</ul>
 
 	</div>
-
-
+<br><br><br><br><br>
+ <!-- formulario de login -->
+ <div id="login">
+	<form>
+		<h1>Inicio de Sesion</h1>
+		<input type="text" max-lenght="45" placeholder="Ingrese su correo"/>
+		<input type="password" max-lenght="12" placeholder="Ingrese su password"/>
+		<button type="submit">Entrar</button>
+		<button type="url" name="Registro" >Registrarse</button>
+	</form>
+</div>
 </body>
 </html>
